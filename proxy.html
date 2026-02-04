@@ -1,0 +1,16 @@
+<script>
+const target = {};
+const proxy = new Proxy(target, {
+  set(obj, prop, val){
+    console.log("Set:", prop);
+    obj[prop] = val;
+    return true;
+  }
+});
+
+proxy.nama = "Ali";
+
+/*
+Proxy memonitor akses object
+*/
+</script>
